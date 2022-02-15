@@ -39,6 +39,10 @@ body {
   cursor: pointer;
 }
 
+#grid-btn {
+  text-align: left;
+}
+
 #clear-btn::after,
 #grid-btn::after {
   content: "";
@@ -50,6 +54,10 @@ body {
   bottom: 0;
   transform: scale(0, 1);
   transition: transform 0.3s ease;
+}
+
+#grid-btn::after {
+  width: 80%;
 }
 
 #clear-btn:hover::after,
