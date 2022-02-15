@@ -1,4 +1,8 @@
 const gridContainer = document.querySelector(".grid-container");
+const clearBtn = document.querySelector("#clear-btn");
+generateGrid();
+changeColor();
+clearColor();
 
 function generateGrid() {
   for (let row = 0; row < 16; row++) {
@@ -21,5 +25,11 @@ function changeColor() {
     });
   });
 }
-generateGrid();
-changeColor();
+
+function clearColor() {
+  clearBtn.addEventListener("click", () => {
+    document.querySelectorAll(".box").forEach((square) => {
+      square.style.backgroundColor = "";
+    });
+  });
+}
