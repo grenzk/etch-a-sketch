@@ -33,3 +33,9 @@ function clearColor() {
     });
   });
 }
+
+function removeGrid() {
+  document.querySelectorAll(".box-container").forEach((container) => {
+    container.remove();
+  });
+}
