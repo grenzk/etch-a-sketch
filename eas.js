@@ -1,14 +1,19 @@
 const gridContainer = document.querySelector(".grid-container");
 const clearBtn = document.querySelector("#clear-btn");
-generateGrid();
-changeColor();
-clearColor();
+const gridBtn = document.querySelector("#grid-btn");
 
-function generateGrid() {
-  for (let row = 0; row < 16; row++) {
+function grid() {
+  generateGrid();
+  changeGridSize();
+  changeColor();
+  clearColor();
+}
+
+function generateGrid(userInput = 16) {
+  for (let row = 0; row < userInput; row++) {
     const boxContainer = document.createElement("div");
     boxContainer.classList.add("box-container");
-    for (let column = 0; column < 16; column++) {
+    for (let column = 0; column < userInput; column++) {
       const box = document.createElement("div");
       box.classList.add("box");
       boxContainer.appendChild(box);
@@ -39,3 +44,19 @@ function removeGrid() {
     container.remove();
   });
 }
+
+function changeGridSize() {
+  gridBtn.addEventListener("click", () => {
+    let userInput = parseInt(prompt("Enter grid size:"));
+    if (userInput <= 100) {
+      removeGrid();
+      generateGrid(userInput);
+      changeColor();
+      clearColor();
+    } else if (userInput > 100) {
+      alert("ERROR! The maximum value is 100. Try again.");
+    }
+  });
+}
+
+grid();
