@@ -2,7 +2,7 @@ const gridContainer = document.querySelector(".grid-container");
 const clearBtn = document.querySelector("#clear-btn");
 const gridBtn = document.querySelector("#grid-btn");
 
-function grid() {
+function displayGrid() {
   generateGrid();
   changeGridSize();
   changeColor();
@@ -59,4 +59,4 @@ function changeGridSize() {
   });
 }
 
-grid();
+displayGrid();
