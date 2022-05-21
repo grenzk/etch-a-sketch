@@ -14,6 +14,10 @@ This project is a basic emulation of the actual etch-a-sketch drawing tool. I cr
 
 4. JavaScript Fundamentals
 
+## Live Demo
+
+Github Page (https://grenzk.github.io/etch-a-sketch/)
+
 ## Source
 
 The Odin Project (https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project)
